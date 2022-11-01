@@ -11,10 +11,10 @@ const Home = () => {
 
   return (
     <div
-      className="bg-[#F5F5FE]  w-screen h-screen flex justify-start items-center gap-28
+      className="bg-[#F5F5FE] dark:bg-[#161516]  w-screen h-screen flex justify-start items-center gap-28
     px-[300px]"
     >
-      <section className="flex flex-col gap-10">
+      <section className="flex flex-col gap-10 text-[#FDF5E8]">
         <h3 className="text-6xl min-w-max">
           Hello,my name is{' '}
           <span className={`${useCurrentTextColor(textColor)}`}>Fanis</span>

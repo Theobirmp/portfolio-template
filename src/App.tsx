@@ -4,19 +4,22 @@ import Sidebar from './components/Sidebar';
 import AppContainer from './components/AppContainer';
 import { TextColorProvider } from './theme/TextColorContext';
 import TextColorSwitch from './components/TextColorSwitch';
+import { DarkModeProvider } from './theme/DarkModeContext';
 function App() {
   return (
-    <TextColorProvider>
-      <AppContainer>
-        <TextColorSwitch />
-        <Router>
-          <Sidebar />
-          <Routes>
-            <Route path="home" element={<Home />} />
-          </Routes>
-        </Router>
-      </AppContainer>
-    </TextColorProvider>
+    <DarkModeProvider>
+      <TextColorProvider>
+        <AppContainer>
+          <TextColorSwitch />
+          <Router>
+            <Sidebar />
+            <Routes>
+              <Route path="home" element={<Home />} />
+            </Routes>
+          </Router>
+        </AppContainer>
+      </TextColorProvider>
+    </DarkModeProvider>
   );
 }
 

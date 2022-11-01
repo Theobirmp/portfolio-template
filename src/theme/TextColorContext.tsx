@@ -3,9 +3,11 @@ import { childrenType } from '../types/childrenType';
 import { textColorType } from '../types/textColorType';
 
 export const colors = {
-  green: '#CCF5AC',
-  blue: '#2C497F',
-  purple: '#3D2B56',
+  blue: '#3A5CC7',
+  green: '#469F8D',
+  pink: '#EE5EC1',
+  red: '#EA4640',
+  orange: '#EC770C',
 };
 
 export const TextColorContext = createContext<textColorType | null>(null);

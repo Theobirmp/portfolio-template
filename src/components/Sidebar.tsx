@@ -23,14 +23,18 @@ const Sidebar = () => {
         return 'border-b border-blue-900';
       case colors.green:
         return 'border-b border-green-900';
-      case colors.purple:
+      case colors.pink:
+        return 'border-b border-purple-900';
+      case colors.pink:
+        return 'border-b border-purple-900';
+      case colors.pink:
         return 'border-b border-purple-900';
       default:
         break;
     }
   };
   return (
-    <nav className="bg-[FEFBFF] relative w-[20vw]  flex flex-col items-center justify-center">
+    <nav className="bg-[#FEFBFF] dark:bg-[#272527] relative w-[20vw]  flex flex-col items-center justify-center">
       <div
         className="absolute top-10 w-[180px] h-[180px]
         "
@@ -65,7 +69,7 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-      <ul className="flex flex-col gap-8 text-2xl">
+      <ul className="flex flex-col gap-8 text-2xl text-[#43364A] dark:text-[#FDF5E8]">
         <li
           className={`${ulDividers()} flex gap-2 items-center ${useCurrentTextColor(
             textColor

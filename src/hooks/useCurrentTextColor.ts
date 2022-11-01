@@ -2,11 +2,15 @@ import { colors } from '../theme/TextColorContext';
 export const useCurrentTextColor = (color: string) => {
   switch (color) {
     case colors.blue:
-      return 'text-blue-900';
+      return `text-[#3A5CC7]`;
     case colors.green:
-      return 'text-green-900';
-    case colors.purple:
-      return 'text-purple-900';
+      return `text-[#469F8D]`;
+    case colors.pink:
+      return `text-[#EE5EC1]`;
+    case colors.red:
+      return `text-[#EA4640]`;
+    case colors.orange:
+      return `text-[#EC770C]`;
     default:
       return 'text-black';
   }
@@ -14,11 +18,15 @@ export const useCurrentTextColor = (color: string) => {
 export const useCurrentBgColor = (color: string) => {
   switch (color) {
     case colors.blue:
-      return 'bg-blue-900';
+      return `bg-[#3A5CC7]`;
     case colors.green:
-      return 'bg-green-900';
-    case colors.purple:
-      return 'bg-purple-900';
+      return `bg-[#469F8D]`;
+    case colors.pink:
+      return `bg-[#EE5EC1]`;
+    case colors.red:
+      return `bg-[#EA4640]`;
+    case colors.orange:
+      return `bg-[#EC770C]`;
     default:
       return 'bg-black';
   }
@@ -26,11 +34,15 @@ export const useCurrentBgColor = (color: string) => {
 export const useCurrentBgColorAfter = (color: string) => {
   switch (color) {
     case colors.blue:
-      return 'after:bg-blue-900';
+      return `after:bg-[#3A5CC7]`;
     case colors.green:
-      return 'after:bg-green-900';
-    case colors.purple:
-      return 'after:bg-purple-900';
+      return `after:bg-[#469F8D]`;
+    case colors.pink:
+      return `after:bg-[#EE5EC1]`;
+    case colors.red:
+      return `after:bg-[#EA4640]`;
+    case colors.orange:
+      return `after:bg-[#EC770C]`;
     default:
       return 'after:bg-black';
   }
@@ -38,11 +50,16 @@ export const useCurrentBgColorAfter = (color: string) => {
 export const useCurrentBgColorBefore = (color: string) => {
   switch (color) {
     case colors.blue:
-      return 'before:bg-blue-900';
+      return `before:bg-[#3A5CC7]`;
+    // return `before:bg-blue-900`;
     case colors.green:
-      return 'before:bg-green-900';
-    case colors.purple:
-      return 'before:bg-purple-900';
+      return `before:bg-[#469F8D]`;
+    case colors.pink:
+      return `before:bg-[#EE5EC1]`;
+    case colors.red:
+      return `before:bg-[#EA4640]`;
+    case colors.orange:
+      return `before:bg-[#EC770C]`;
     default:
       return 'before:bg-black';
   }
