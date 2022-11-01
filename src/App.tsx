@@ -8,6 +8,7 @@ import { DarkModeProvider } from './theme/DarkModeContext';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
+import Portfolio from './pages/Portfolio';
 function App() {
   return (
     <DarkModeProvider>
@@ -21,6 +22,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/portfolio" element={<Portfolio />} />
             </Routes>
           </Router>
         </AppContainer>
