@@ -1,4 +1,20 @@
 import { colors } from '../theme/TextColorContext';
+export const useCurrentColor = (color: string) => {
+  switch (color) {
+    case colors.blue:
+      return `#3A5CC7`;
+    case colors.green:
+      return `#469F8D`;
+    case colors.pink:
+      return `#EE5EC1`;
+    case colors.red:
+      return `#EA4640`;
+    case colors.orange:
+      return `#EC770C`;
+    default:
+      return 'text-black';
+  }
+};
 export const useCurrentTextColor = (color: string) => {
   switch (color) {
     case colors.blue:

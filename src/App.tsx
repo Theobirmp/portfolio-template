@@ -7,6 +7,7 @@ import TextColorSwitch from './components/TextColorSwitch';
 import { DarkModeProvider } from './theme/DarkModeContext';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Services from './pages/Services';
 function App() {
   return (
     <DarkModeProvider>
@@ -19,6 +20,7 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
             </Routes>
           </Router>
         </AppContainer>

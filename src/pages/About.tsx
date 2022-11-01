@@ -25,7 +25,7 @@ const About = () => {
         </section>
         <section
           className="text-[#43364A] dark:text-[#FDF5E8] para
-        flex gap-2"
+        flex gap-8"
         >
           <ContactInfo />
           <Skills />

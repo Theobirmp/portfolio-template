@@ -26,12 +26,16 @@ const ContactInfo = () => {
       </div>
       <div className="self-start mt-8 flex gap-2">
         <button
-          className={`${useCurrentBgColor(textColor)} rounded-full px-4 py-2`}
+          className={`${useCurrentBgColor(
+            textColor
+          )} rounded-full px-4 py-2 text-[#43364A] dark:text-[#FDF5E8] font-bold`}
         >
           Download CV
         </button>
         <button
-          className={`${useCurrentBgColor(textColor)} rounded-full px-4 py-2`}
+          className={`${useCurrentBgColor(
+            textColor
+          )} rounded-full px-4 py-2 text-[#43364A] dark:text-[#FDF5E8] font-bold`}
         >
           Hire Me
         </button>

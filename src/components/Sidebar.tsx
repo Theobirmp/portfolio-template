@@ -77,8 +77,10 @@ const Sidebar = () => {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? `${ulDividers()} ${useCurrentTextColor(textColor)} flex gap-2`
-                : 'flex gap-2 divider'
+                ? `${ulDividers()} ${useCurrentTextColor(
+                    textColor
+                  )} flex gap-2 items-center`
+                : 'flex gap-2 divider items-center'
             }
             to="home"
           >
@@ -90,8 +92,10 @@ const Sidebar = () => {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? `${ulDividers()} ${useCurrentTextColor(textColor)} flex gap-2`
-                : 'flex gap-2 divider'
+                ? `${ulDividers()} ${useCurrentTextColor(
+                    textColor
+                  )} flex gap-2 items-center`
+                : 'flex gap-2 divider items-center'
             }
             to="about"
           >
@@ -103,8 +107,10 @@ const Sidebar = () => {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? `${ulDividers()} ${useCurrentTextColor(textColor)} flex gap-2`
-                : 'flex gap-2 divider'
+                ? `${ulDividers()} ${useCurrentTextColor(
+                    textColor
+                  )} flex gap-2 items-center`
+                : 'flex gap-2 divider items-center'
             }
             to="services"
           >
@@ -116,8 +122,10 @@ const Sidebar = () => {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? `${ulDividers()} ${useCurrentTextColor(textColor)} flex gap-2`
-                : 'flex gap-2 divider'
+                ? `${ulDividers()} ${useCurrentTextColor(
+                    textColor
+                  )} flex gap-2 items-center`
+                : 'flex gap-2 divider items-center'
             }
             to="portfolio"
           >
@@ -129,8 +137,10 @@ const Sidebar = () => {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? `${ulDividers()} ${useCurrentTextColor(textColor)} flex gap-2`
-                : 'flex gap-2 divider'
+                ? `${ulDividers()} ${useCurrentTextColor(
+                    textColor
+                  )} flex gap-2 items-center`
+                : 'flex gap-2 divider items-center'
             }
             to="contact"
           >
