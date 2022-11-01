@@ -15,7 +15,7 @@ const TextColorSwitch = () => {
     <motion.section
       initial={{ translateX: 150 }}
       animate={openColorPicker ? { translateX: 0 } : { translateX: 150 }}
-      className="absolute top-10 right-0 z-10 min-w-[200px] h-[100px] 
+      className="fixed top-10 right-0 z-10 min-w-[200px] h-[100px] 
     flex justify-between items-center px-4 py-2 gap-4
     rounded-md shadow-md bg-[#43364A] dark:bg-[#FDF5E8]"
     >

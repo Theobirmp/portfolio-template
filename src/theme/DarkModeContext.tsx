@@ -10,7 +10,7 @@ type darkModeContextType = {
 export const DarkModeContext = createContext<darkModeContextType | null>(null);
 
 export const DarkModeProvider = ({ children }: childrenType) => {
-  const [darkMode, setDarkMode] = useState('light');
+  const [darkMode, setDarkMode] = useState('dark');
   const toggleDarkMode = () => {
     darkMode === 'light' ? setDarkMode('dark') : setDarkMode('light');
   };

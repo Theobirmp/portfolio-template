@@ -1,3 +1,4 @@
+import PageContainer from '../components/PageContainer';
 import {
   useCurrentBgColor,
   useCurrentBgColorAfter,
@@ -10,11 +11,8 @@ const Home = () => {
   const { textColor, setTextColor } = useTextColor();
 
   return (
-    <div
-      className="bg-[#F5F5FE] dark:bg-[#161516]  w-screen h-screen flex justify-start items-center gap-28
-    px-[300px]"
-    >
-      <section className="flex flex-col gap-10 text-[#FDF5E8]">
+    <PageContainer>
+      <section className="flex flex-col gap-10 text-[#43364A] dark:text-[#FDF5E8]">
         <h3 className="text-6xl min-w-max">
           Hello,my name is{' '}
           <span className={`${useCurrentTextColor(textColor)}`}>Fanis</span>
@@ -58,7 +56,7 @@ const Home = () => {
           <img src="./person.jpg" alt="this is an image" />
         </div>
       </section>
-    </div>
+    </PageContainer>
   );
 };
 

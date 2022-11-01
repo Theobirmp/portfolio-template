@@ -4,7 +4,7 @@ const AppContainer = ({ children }: childrenType) => {
   const { darkMode } = useDarkMode();
   return (
     <div
-      className={`${darkMode} relative bg-[#F5F5FE] dark:bg-[#161516]  min-h-screen w-screen flex `}
+      className={`${darkMode} relative bg-[#F5F5FE] dark:bg-[#161516]  min-h-screen w-screen flex justify-end`}
     >
       {children}
     </div>

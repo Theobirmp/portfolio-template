@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AiFillHome } from 'react-icons/ai';
 import {
   BsFillPersonFill,
@@ -25,16 +25,19 @@ const Sidebar = () => {
         return 'border-b border-green-900';
       case colors.pink:
         return 'border-b border-purple-900';
-      case colors.pink:
+      case colors.red:
         return 'border-b border-purple-900';
-      case colors.pink:
+      case colors.orange:
         return 'border-b border-purple-900';
       default:
         break;
     }
   };
   return (
-    <nav className="bg-[#FEFBFF] dark:bg-[#272527] relative w-[20vw]  flex flex-col items-center justify-center">
+    <nav
+      className="
+    bg-[#FEFBFF] dark:bg-[#272527] fixed left-0 top-0 h-screen w-[20vw]  flex flex-col items-center justify-center"
+    >
       <div
         className="absolute top-10 w-[180px] h-[180px]
         "
@@ -70,31 +73,70 @@ const Sidebar = () => {
         </div>
       </div>
       <ul className="flex flex-col gap-8 text-2xl text-[#43364A] dark:text-[#FDF5E8]">
-        <li
-          className={`${ulDividers()} flex gap-2 items-center ${useCurrentTextColor(
-            textColor
-          )}`}
-        >
-          <AiFillHome />
-          <Link className={``} to="home">
+        <li className={` flex gap-2 items-center `}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? `${ulDividers()} ${useCurrentTextColor(textColor)} flex gap-2`
+                : 'flex gap-2 divider'
+            }
+            to="home"
+          >
+            <AiFillHome />
             Home
-          </Link>
+          </NavLink>
         </li>
-        <li className={`${ulDividers()} flex gap-2 items-center`}>
-          <BsFillPersonFill />
-          <Link to="about">About</Link>
+        <li className={` flex gap-2 items-center`}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? `${ulDividers()} ${useCurrentTextColor(textColor)} flex gap-2`
+                : 'flex gap-2 divider'
+            }
+            to="about"
+          >
+            <BsFillPersonFill />
+            About
+          </NavLink>
         </li>
-        <li className={`${ulDividers()} flex gap-2 items-center`}>
-          <BsListUl />
-          <Link to="services">Services</Link>
+        <li className={` flex gap-2 items-center`}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? `${ulDividers()} ${useCurrentTextColor(textColor)} flex gap-2`
+                : 'flex gap-2 divider'
+            }
+            to="services"
+          >
+            <BsListUl />
+            Services
+          </NavLink>
         </li>
-        <li className={`${ulDividers()} flex gap-2 items-center`}>
-          <BsBriefcaseFill />
-          <Link to="portfolio">Portfolio</Link>
+        <li className={` flex gap-2 items-center`}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? `${ulDividers()} ${useCurrentTextColor(textColor)} flex gap-2`
+                : 'flex gap-2 divider'
+            }
+            to="portfolio"
+          >
+            <BsBriefcaseFill />
+            Portfolio
+          </NavLink>
         </li>
-        <li className={`${ulDividers()} flex gap-2 items-center`}>
-          <BsMessenger />
-          <Link to="contact">Contact</Link>
+        <li className={` flex gap-2 items-center`}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? `${ulDividers()} ${useCurrentTextColor(textColor)} flex gap-2`
+                : 'flex gap-2 divider'
+            }
+            to="contact"
+          >
+            <BsMessenger />
+            Contact
+          </NavLink>
         </li>
       </ul>
     </nav>
