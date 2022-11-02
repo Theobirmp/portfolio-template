@@ -4,18 +4,25 @@ import { useTextColor } from '../hooks/useTextColor';
 import { colors } from '../theme/TextColorContext';
 import { motion } from 'framer-motion';
 import { useDarkMode } from '../hooks/useDarkMode';
-const TextColorSwitch = () => {
+import { TextColorSwitchPropsType } from '../types/textColorSwitchType';
+import { GiHamburgerMenu } from 'react-icons/gi';
+const TextColorSwitch = ({
+  setIsMobileNavbarOpen,
+}: TextColorSwitchPropsType) => {
   const { setTextColor } = useTextColor();
   const handleChangeTextColor = (color: string) => {
     setTextColor(color);
   };
   const [openColorPicker, setOpenColorPicker] = useState(false);
-  const { toggleDarkMode } = useDarkMode();
+  const { darkMode, toggleDarkMode } = useDarkMode();
+  const toggleNavbar = () => {
+    setIsMobileNavbarOpen((mobileNavbarOpen) => !mobileNavbarOpen);
+  };
   return (
     <motion.section
       initial={{ translateX: 150 }}
       animate={openColorPicker ? { translateX: 0 } : { translateX: 150 }}
-      className="fixed top-10 right-0 z-10 min-w-[200px] h-[100px] 
+      className="fixed z-20 top-10 right-0 min-w-[200px] h-[160px] md:h-[100px] 
     flex justify-between items-center px-4 py-2 gap-4
     rounded-md shadow-md bg-transparent"
     >
@@ -33,13 +40,29 @@ const TextColorSwitch = () => {
           onClick={toggleDarkMode}
           className="p-1 bg-gray-300 rounded-full"
         >
-          <BsFillSunFill
+          {darkMode === 'dark' ? (
+            <BsFillSunFill
+              size={30}
+              className="hover:scale-110 ease-linear duration-200"
+            />
+          ) : (
+            <BsFillMoonFill
+              size={30}
+              className="hover:scale-110 ease-linear duration-200"
+            />
+          )}
+        </button>
+        <button
+          onClick={toggleNavbar}
+          className="inline-block md:hidden p-1 bg-gray-300 rounded-full"
+        >
+          <GiHamburgerMenu
             size={30}
             className="hover:scale-110 ease-linear duration-200"
           />
         </button>
       </div>
-      <div className=" w-[100%] h-[100%] flex flex-col gap-2 justify-center items-center">
+      <div className="w-[100%] h-[100%] flex flex-col gap-2 justify-center items-center">
         <h4 className="text-center min-w-max text-[#43364A] dark:text-[#FDF5E8]">
           Theme Colors
         </h4>

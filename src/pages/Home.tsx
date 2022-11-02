@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <PageContainer>
-      <div className="flex flex-col-reverse lg:flex-row gap-10 justify-end py-10 items-center lg:items-center">
+      <div className="flex flex-col-reverse lg:flex-row gap-10 justify-end py-6 md:py-10 items-center lg:items-center">
         <section className="border flex flex-col gap-2 md:gap-10 text-[#43364A] dark:text-[#FDF5E8]">
           <h3 className="text-4xl xl:text-5xl ">
             Hello,my name is{' '}
@@ -36,16 +36,16 @@ const Home = () => {
             More About Me
           </button>
         </section>
-        <section className="border">
+        <section className="">
           <div
-            className={`relative max-h-[700px] max-w-[1200px]
+            className={`hidden md:block relative max-h-[700px] max-w-[1200px]
         after:absolute after:content-[""] after:bottom-[-50px] after:right-[-50px] 
         after:w-[50px] after:h-[10px] ${useCurrentBgColorAfter(textColor)}
         before:absolute before:content-[""] before:bottom-[-50px] before:right-[-50px] 
         before:w-[10px] before:h-[50px] ${useCurrentBgColorBefore(textColor)}`}
           >
             <div
-              className={`relative 
+              className={`hidden md:block relative 
             after:absolute after:content-[""] after:top-[-50px] after:left-[-50px]
               after:w-[50px] after:h-[10px] ${useCurrentBgColorAfter(textColor)}
             before:absolute before:content-[""] before:top-[-50px] before:left-[-50px]
@@ -59,6 +59,11 @@ const Home = () => {
               alt="this is an image"
             />
           </div>
+          <img
+            className="block md:hidden max-w-[320px] md:max-w-[400px]"
+            src="./person.jpg"
+            alt="this is an image"
+          />
         </section>
       </div>
     </PageContainer>

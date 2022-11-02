@@ -21,7 +21,7 @@ const Contact = () => {
     <PageContainer>
       <section className="flex flex-col items-center w-[100%]">
         <header className="self-start flex flex-col gap-2 heading1 text-[#43364A] dark:text-[#FDF5E8] mb-10">
-          <h3>Contact Me</h3>
+          <h3>Contact </h3>
           <BiMenuAltLeft color={textColor} />
         </header>
         <h3 className={`${useCurrentTextColor(textColor)} heading3 mb-10`}>
@@ -31,7 +31,7 @@ const Contact = () => {
           action=""
           className="relative flex flex-col gap-4 w-[100%] max-w-[1000px]"
         >
-          <div className="flex gap-2 ">
+          <div className="flex flex-col md:flex-row gap-2 ">
             <div className="flex flex-col gap-2 w-[100%]">
               <label
                 className="text-[#43364A] dark:text-[#FDF5E8] ml-2"

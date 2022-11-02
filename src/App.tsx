@@ -9,13 +9,21 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
+import MobileNavbar from './components/MobileNavbar';
+import { useState } from 'react';
 function App() {
+  const [isMobileNavbarOpen, setIsMobileNavbarOpen] = useState(false);
+
   return (
     <DarkModeProvider>
       <TextColorProvider>
         <AppContainer>
-          <TextColorSwitch />
+          <TextColorSwitch setIsMobileNavbarOpen={setIsMobileNavbarOpen} />
           <Router>
+            <MobileNavbar
+              isMobileNavbarOpen={isMobileNavbarOpen}
+              setIsMobileNavbarOpen={setIsMobileNavbarOpen}
+            />
             <Sidebar />
             <Routes>
               <Route path="/home" element={<Home />} />
