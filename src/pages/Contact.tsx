@@ -7,7 +7,7 @@ import {
 } from '../hooks/useCurrentTextColor';
 import { useTextColor } from '../hooks/useTextColor';
 
-const WORDS_ALLOWED = 5;
+const WORDS_ALLOWED = 100;
 
 const Contact = () => {
   const { textColor } = useTextColor();
