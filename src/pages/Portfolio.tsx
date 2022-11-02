@@ -14,7 +14,7 @@ const Portfolio = () => {
           <h3>My Projects</h3>
           <BiMenuAltLeft color={textColor} />
         </header>
-        <section className="flex gap-8 flex-wrap">
+        <section className="border flex justify-center   gap-8 flex-wrap">
           <PortfolioCard />
           <PortfolioCard />
           <PortfolioCard />

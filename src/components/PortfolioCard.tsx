@@ -12,11 +12,7 @@ const PortfolioCard = () => {
         </h3>
       </header>
       <div>
-        <img
-          className="max-w-[400px] max-h-[400px]"
-          src="./projectImages/foodDesktop.png"
-          alt=""
-        />
+        <img className="" src="./projectImages/foodDesktop.png" alt="" />
       </div>
       <div className="px-2 flex justify-between items-center">
         <h4>{['test', 'test', 'test', 'test'].map((tech) => tech)}</h4>

@@ -4,7 +4,7 @@ import { useTextColor } from '../hooks/useTextColor';
 const Skills = () => {
   const { textColor } = useTextColor();
   return (
-    <section className="w-[50%]">
+    <section className="lg:w-[50%]">
       <header>
         <h3 className="heading2 mb-4">Skills</h3>
       </header>

@@ -16,12 +16,12 @@ const Services = () => {
   const { textColor } = useTextColor();
   return (
     <PageContainer>
-      <section>
+      <section className="border">
         <header className="self-start flex flex-col gap-2 heading1 text-[#43364A] dark:text-[#FDF5E8] mb-10">
           <h3>My Skills</h3>
           <BiMenuAltLeft color={textColor} />
         </header>
-        <section className="flex gap-8 flex-wrap">
+        <section className="flex justify-center gap-8 flex-wrap">
           <div
             className="flex flex-col gap-4 max-w-[400px] px-12 py-4 items-center shadow-md bg-[#FEFBFF] dark:bg-[#272527]
           rounded-md"

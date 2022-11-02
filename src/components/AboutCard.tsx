@@ -1,14 +1,20 @@
 import { AiOutlineCalendar } from 'react-icons/ai';
-import { useCurrentBgColor } from '../hooks/useCurrentTextColor';
+import {
+  useCurrentBgColor,
+  useCurrentTextColor,
+} from '../hooks/useCurrentTextColor';
 import { useTextColor } from '../hooks/useTextColor';
 const AboutCard = () => {
   const { textColor } = useTextColor();
   return (
     <div
-      className="relative rounded-md shadow-md bg-[#FEFBFF] dark:bg-[#272527] 
-    flex flex-col gap-6 w-[50%]
+      className="border relative rounded-md shadow-md bg-[#FEFBFF] dark:bg-[#272527] 
+    flex flex-col gap-6 lg:w-[50%]
     pl-12 pr-6 py-4 mt-10"
     >
+      <h3 className={`heading4 ${useCurrentTextColor(textColor)}`}>
+        Education
+      </h3>
       <div className="relative flex flex-col gap-2">
         <span
           className={`absolute left-[-32px] top-0 w-[20px] aspect-square rounded-full

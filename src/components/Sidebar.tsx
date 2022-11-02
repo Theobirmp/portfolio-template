@@ -20,26 +20,26 @@ const Sidebar = () => {
   const ulDividers = () => {
     switch (textColor) {
       case colors.blue:
-        return 'border-b border-blue-900';
+        return 'border-b border-[#3A5CC7]';
       case colors.green:
-        return 'border-b border-green-900';
+        return 'border-b border-[#469F8D]';
       case colors.pink:
-        return 'border-b border-purple-900';
+        return 'border-b border-[#EE5EC1]';
       case colors.red:
-        return 'border-b border-purple-900';
+        return 'border-b border-[#EA4640]';
       case colors.orange:
-        return 'border-b border-purple-900';
+        return 'border-b border-[#EC770C]';
       default:
         break;
     }
   };
   return (
     <nav
-      className="
-    bg-[#FEFBFF] dark:bg-[#272527] fixed left-0 top-0 h-screen w-[20vw]  flex flex-col items-center justify-center"
+      className="hidden md:flex
+    bg-[#FEFBFF] dark:bg-[#272527] fixed left-0 top-0 h-screen w-[20vw]   flex-col items-center justify-center"
     >
       <div
-        className="absolute top-10 w-[180px] h-[180px]
+        className="absolute top-10 aspect-square sm:w-[140px] md:w-[140px]lg:w-[180px]
         "
       >
         <div

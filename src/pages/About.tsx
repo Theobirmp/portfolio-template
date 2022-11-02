@@ -9,7 +9,7 @@ const About = () => {
   return (
     <PageContainer>
       <article className="flex flex-col gap-10">
-        <section className="">
+        <section>
           <header className="flex flex-col gap-2 heading1 text-[#43364A] dark:text-[#FDF5E8]">
             <h3>About Me</h3>
             <BiMenuAltLeft color={textColor} />
@@ -25,12 +25,12 @@ const About = () => {
         </section>
         <section
           className="text-[#43364A] dark:text-[#FDF5E8] para
-        flex gap-8"
+        flex flex-col lg:flex-row gap-8"
         >
           <ContactInfo />
           <Skills />
         </section>
-        <section className="flex gap-4">
+        <section className="flex flex-col lg:flex-row gap-4">
           <AboutCard />
           <AboutCard />
         </section>

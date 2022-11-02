@@ -19,7 +19,7 @@ const Contact = () => {
   };
   return (
     <PageContainer>
-      <section className="flex flex-col justify-center items-center w-[100%]">
+      <section className="flex flex-col items-center w-[100%]">
         <header className="self-start flex flex-col gap-2 heading1 text-[#43364A] dark:text-[#FDF5E8] mb-10">
           <h3>Contact Me</h3>
           <BiMenuAltLeft color={textColor} />
