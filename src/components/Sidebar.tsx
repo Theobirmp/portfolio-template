@@ -85,6 +85,7 @@ const Sidebar = () => {
                 : 'flex gap-2 divider items-center'
             }
             to="/"
+            end
           >
             <AiFillHome />
             Home
