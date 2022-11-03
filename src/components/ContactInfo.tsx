@@ -28,14 +28,14 @@ const ContactInfo = () => {
         <button
           className={`${useCurrentBgColor(
             textColor
-          )} rounded-full px-4 py-2 text-[#43364A] dark:text-[#FDF5E8] font-bold min-w-max`}
+          )} rounded-full px-4 py-2 text-[#FDF5E8] font-bold min-w-max`}
         >
           Download CV
         </button>
         <button
           className={`${useCurrentBgColor(
             textColor
-          )} rounded-full px-4 py-2 text-[#43364A] dark:text-[#FDF5E8] font-bold min-w-max`}
+          )} rounded-full px-4 py-2 text-[#FDF5E8] font-bold min-w-max`}
         >
           Hire Me
         </button>

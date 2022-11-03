@@ -30,7 +30,7 @@ function App() {
             setIsMobileNavbarOpen={setIsMobileNavbarOpen}
           />
           <Sidebar />
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />

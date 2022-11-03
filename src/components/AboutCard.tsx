@@ -8,7 +8,7 @@ const AboutCard = () => {
   const { textColor } = useTextColor();
   return (
     <div
-      className="border relative rounded-md shadow-md bg-[#FEFBFF] dark:bg-[#272527] 
+      className=" relative rounded-md shadow-md bg-[#FEFBFF] dark:bg-[#272527] 
     flex flex-col gap-6 lg:w-[50%]
     pl-12 pr-6 py-4 mt-10"
     >

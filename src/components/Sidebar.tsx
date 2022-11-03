@@ -63,11 +63,13 @@ const Sidebar = () => {
   `}
           >
             <h1>
-              <DiReact
-                size={100}
-                color="#61DBFB"
-                className="hover:rotate-[90deg] transition-transform duration-200 ease-linear"
-              />
+              <Link to="/home">
+                <DiReact
+                  size={100}
+                  color="#61DBFB"
+                  className="hover:rotate-[90deg] transition-transform duration-200 ease-linear"
+                />
+              </Link>
             </h1>
           </div>
         </div>

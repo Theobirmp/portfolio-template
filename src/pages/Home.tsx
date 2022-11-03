@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <PageContainer>
       <div className="flex flex-col-reverse lg:flex-row gap-10 justify-end py-6 md:py-10 items-center lg:items-center">
-        <section className="border flex flex-col gap-2 md:gap-10 text-[#43364A] dark:text-[#FDF5E8]">
+        <section className=" flex flex-col gap-2 md:gap-10 text-[#43364A] dark:text-[#FDF5E8]">
           <h3 className="text-4xl xl:text-5xl ">
             Hello,my name is{' '}
             <span className={`${useCurrentTextColor(textColor)}`}>Fanis</span>

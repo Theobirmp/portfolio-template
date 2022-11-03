@@ -16,7 +16,7 @@ const Services = () => {
   const { textColor } = useTextColor();
   return (
     <PageContainer>
-      <section className="border">
+      <section>
         <header className="self-start flex flex-col gap-2 heading1 text-[#43364A] dark:text-[#FDF5E8] mb-10">
           <h3>My Skills</h3>
           <BiMenuAltLeft color={textColor} />
