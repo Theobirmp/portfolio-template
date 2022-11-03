@@ -63,7 +63,7 @@ const Sidebar = () => {
   `}
           >
             <h1>
-              <Link to="/home">
+              <Link to="/">
                 <DiReact
                   size={100}
                   color="#61DBFB"
@@ -84,7 +84,7 @@ const Sidebar = () => {
                   )} flex gap-2 items-center`
                 : 'flex gap-2 divider items-center'
             }
-            to="home"
+            to="/"
           >
             <AiFillHome />
             Home

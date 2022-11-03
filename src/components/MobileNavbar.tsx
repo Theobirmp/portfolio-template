@@ -20,7 +20,7 @@ const MobileNavbar = ({
         >
           <ul className="w-[100%] h-[100%]  flex flex-col items-center justify-center gap-20 ">
             <li className="w-[100px] grid place-content-center text-2xl text-[#43364A] dark:text-[#FDF5E8] font-bold divider">
-              <Link to="home" onClick={handleNavClicked}>
+              <Link to="/" onClick={handleNavClicked}>
                 Home
               </Link>
             </li>
