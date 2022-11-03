@@ -12,6 +12,8 @@ import { DiJavascript1 } from 'react-icons/di';
 import { DiReact } from 'react-icons/di';
 import { DiNodejs } from 'react-icons/di';
 import { SiTailwindcss } from 'react-icons/si';
+import SingleService from '../components/SingleService';
+import skills from '../data/services';
 const Services = () => {
   const { textColor } = useTextColor();
   return (
@@ -22,72 +24,34 @@ const Services = () => {
           <BiMenuAltLeft color={textColor} />
         </header>
         <section className="flex justify-center gap-8 flex-wrap">
-          <div
-            className="flex flex-col gap-4 max-w-[400px] px-12 py-4 items-center shadow-md bg-[#FEFBFF] dark:bg-[#272527]
-          rounded-md"
-          >
-            <DiCss3 size={100} color={useCurrentColor(textColor)} />
-            <p className="para text-[#43364A] dark:text-[#FDF5E8]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-              odit fugit dicta necessitatibus, maiores atque tempore facilis
-              impedit aliquid quia.
-            </p>
-          </div>
-          <div
-            className="flex flex-col gap-4 max-w-[400px] px-12 py-4 items-center shadow-md bg-[#FEFBFF] dark:bg-[#272527]
-          rounded-md"
-          >
-            <DiJavascript1 size={100} color={useCurrentColor(textColor)} />
-            <p className="para text-[#43364A] dark:text-[#FDF5E8]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-              odit fugit dicta necessitatibus, maiores atque tempore facilis
-              impedit aliquid quia.
-            </p>
-          </div>
-          <div
-            className="flex flex-col gap-4 max-w-[400px] px-12 py-4 items-center shadow-md bg-[#FEFBFF] dark:bg-[#272527]
-          rounded-md"
-          >
-            <DiReact size={100} color={useCurrentColor(textColor)} />
-            <p className="para text-[#43364A] dark:text-[#FDF5E8]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-              odit fugit dicta necessitatibus, maiores atque tempore facilis
-              impedit aliquid quia.
-            </p>
-          </div>
-          <div
-            className="flex flex-col gap-4 max-w-[400px] px-12 py-4 items-center shadow-md bg-[#FEFBFF] dark:bg-[#272527]
-          rounded-md"
-          >
-            <SiTailwindcss size={100} color={useCurrentColor(textColor)} />
-            <p className="para text-[#43364A] dark:text-[#FDF5E8]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-              odit fugit dicta necessitatibus, maiores atque tempore facilis
-              impedit aliquid quia.
-            </p>
-          </div>
-          <div
-            className="flex flex-col gap-4 max-w-[400px] px-12 py-4 items-center shadow-md bg-[#FEFBFF] dark:bg-[#272527]
-          rounded-md"
-          >
-            <DiNodejs size={100} color={useCurrentColor(textColor)} />
-            <p className="para text-[#43364A] dark:text-[#FDF5E8]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-              odit fugit dicta necessitatibus, maiores atque tempore facilis
-              impedit aliquid quia.
-            </p>
-          </div>
-          <div
-            className="flex flex-col gap-4 max-w-[400px] px-12 py-4 items-center shadow-md bg-[#FEFBFF] dark:bg-[#272527]
-          rounded-md"
-          >
-            <AiFillHtml5 size={100} color={useCurrentColor(textColor)} />
-            <p className="para text-[#43364A] dark:text-[#FDF5E8]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-              odit fugit dicta necessitatibus, maiores atque tempore facilis
-              impedit aliquid quia.
-            </p>
-          </div>
+          <SingleService
+            text={skills.html}
+            icon={<AiFillHtml5 size={100} color={useCurrentColor(textColor)} />}
+          />
+          <SingleService
+            text={skills.css}
+            icon={<DiCss3 size={100} color={useCurrentColor(textColor)} />}
+          />
+          <SingleService
+            text={skills.tailwind}
+            icon={
+              <SiTailwindcss size={100} color={useCurrentColor(textColor)} />
+            }
+          />
+          <SingleService
+            text={skills.js}
+            icon={
+              <DiJavascript1 size={100} color={useCurrentColor(textColor)} />
+            }
+          />
+          <SingleService
+            text={skills.react}
+            icon={<DiReact size={100} color={useCurrentColor(textColor)} />}
+          />
+          <SingleService
+            text={skills.node}
+            icon={<DiNodejs size={100} color={useCurrentColor(textColor)} />}
+          />
         </section>
       </section>
     </PageContainer>

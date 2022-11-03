@@ -117,7 +117,7 @@ const Sidebar = () => {
             to="services"
           >
             <BsListUl />
-            Services
+            Skills
           </NavLink>
         </li>
         <li className={` flex gap-2 items-center`}>

@@ -4,6 +4,8 @@ import { useTextColor } from '../hooks/useTextColor';
 import ContactInfo from '../components/ContactInfo';
 import Skills from '../components/Skills';
 import AboutCard from '../components/AboutCard';
+import about, { experienceCard } from '../data/about';
+import { educationCard } from '../data/about';
 const About = () => {
   const { textColor } = useTextColor();
   return (
@@ -14,14 +16,12 @@ const About = () => {
             <h3>About Me</h3>
             <BiMenuAltLeft color={textColor} />
           </header>
-          <h4 className="text-[#43364A] dark:text-[#FDF5E8]">
-            I am Fanis and a Web Developer
+          <h4 className="text-[#43364A] dark:text-[#FDF5E8] mt-10 heading4">
+            {about.header}
           </h4>
-          <p className="para text-[#43364A] dark:text-[#FDF5E8]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            tempora officiis pariatur deserunt fugiat perferendis dicta amet,
-            odit quas voluptatem.
-          </p>
+          {/* <p className="para text-[#43364A] dark:text-[#FDF5E8]">
+            {about.header}
+          </p> */}
         </section>
         <section
           className="text-[#43364A] dark:text-[#FDF5E8] para
@@ -31,8 +31,8 @@ const About = () => {
           <Skills />
         </section>
         <section className="flex flex-col lg:flex-row gap-4">
-          <AboutCard />
-          <AboutCard />
+          <AboutCard title={educationCard.title} data={educationCard.data} />
+          <AboutCard title={experienceCard.title} data={experienceCard.data} />
         </section>
       </article>
     </PageContainer>

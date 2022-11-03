@@ -4,7 +4,17 @@ import {
   useCurrentTextColor,
 } from '../hooks/useCurrentTextColor';
 import { useTextColor } from '../hooks/useTextColor';
-const AboutCard = () => {
+import { educationCard } from '../data/about';
+type aboutCardDataType = {
+  date: string;
+  title: string;
+  info: string;
+};
+type aboutCardPropsType = {
+  title: string;
+  data: aboutCardDataType[];
+};
+const AboutCard = ({ title, data }: aboutCardPropsType) => {
   const { textColor } = useTextColor();
   return (
     <div
@@ -12,63 +22,30 @@ const AboutCard = () => {
     flex flex-col gap-6 lg:w-[50%]
     pl-12 pr-6 py-4 mt-10"
     >
-      <h3 className={`heading4 ${useCurrentTextColor(textColor)}`}>
-        Education
-      </h3>
-      <div className="relative flex flex-col gap-2">
-        <span
-          className={`absolute left-[-32px] top-0 w-[20px] aspect-square rounded-full
+      <h3 className={`heading4 ${useCurrentTextColor(textColor)}`}>{title}</h3>
+      {educationCard.data.map((card) => {
+        return (
+          <div className="relative flex flex-col gap-2">
+            <span
+              className={`absolute left-[-32px] top-0 w-[20px] aspect-square rounded-full
         ${useCurrentBgColor(textColor)}`}
-        ></span>
-        <header className="flex gap-2 justify-start items-center">
-          <AiOutlineCalendar className="text-[#898090] dark:text-[#FDF5E8]" />
-          <h3 className="text-[#43364A] dark:text-[#FDF5E8]">2016 - 2022</h3>
-        </header>
-        <h3 className="font-bold heading4 text-[#43364A] dark:text-[#FDF5E8]">
-          Bachelor's Degree
-        </h3>
-        <p className="text-[#43364A] dark:text-[#FDF5E8] para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint impedit
-          similique voluptatum. Quasi nam quidem labore dolorem quaerat in vel
-          voluptatibus quisquam. Odit sint quidem aut, cum vero unde temporibus.
-        </p>
-      </div>
-      <div className="relative flex flex-col gap-2">
-        <span
-          className={`absolute left-[-32px] top-0 w-[20px] aspect-square rounded-full
-        ${useCurrentBgColor(textColor)}`}
-        ></span>
-        <header className="flex gap-2 justify-start items-center">
-          <AiOutlineCalendar className="text-[#898090] dark:text-[#FDF5E8]" />
-          <h3 className="text-[#43364A] dark:text-[#FDF5E8]">2016 - 2022</h3>
-        </header>
-        <h3 className="font-bold heading4 text-[#43364A] dark:text-[#FDF5E8]">
-          Bachelor's Degree
-        </h3>
-        <p className="text-[#43364A] dark:text-[#FDF5E8] para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint impedit
-          similique voluptatum. Quasi nam quidem labore dolorem quaerat in vel
-          voluptatibus quisquam. Odit sint quidem aut, cum vero unde temporibus.
-        </p>
-      </div>
-      <div className="relative flex flex-col gap-2">
-        <span
-          className={`absolute left-[-32px] top-0 w-[20px] aspect-square rounded-full
-        ${useCurrentBgColor(textColor)}`}
-        ></span>
-        <header className="flex gap-2 justify-start items-center">
-          <AiOutlineCalendar className="text-[#898090] dark:text-[#FDF5E8]" />
-          <h3 className="text-[#43364A] dark:text-[#FDF5E8]">2016 - 2022</h3>
-        </header>
-        <h3 className="font-bold heading4 text-[#43364A] dark:text-[#FDF5E8]">
-          Bachelor's Degree
-        </h3>
-        <p className="text-[#43364A] dark:text-[#FDF5E8] para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint impedit
-          similique voluptatum. Quasi nam quidem labore dolorem quaerat in vel
-          voluptatibus quisquam. Odit sint quidem aut, cum vero unde temporibus.
-        </p>
-      </div>
+            ></span>
+            <header className="flex gap-2 justify-start items-center">
+              <AiOutlineCalendar className="text-[#898090] dark:text-[#FDF5E8]" />
+              <h3 className="text-[#43364A] dark:text-[#FDF5E8]">
+                {card.date}
+              </h3>
+            </header>
+            <h3 className="font-bold heading4 text-[#43364A] dark:text-[#FDF5E8]">
+              {card.title}
+            </h3>
+            <p className="text-[#43364A] dark:text-[#FDF5E8] para">
+              {card.info}
+            </p>
+          </div>
+        );
+      })}
+
       <div
         className={`absolute ${useCurrentBgColor(
           textColor

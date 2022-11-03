@@ -48,3 +48,9 @@ img {
 .divider {
   border-bottom: rgba(210, 209, 209, 0.439) solid 1px;
 }
+/* smooth animations */
+*,
+*:before,
+*::after {
+  transition: all linear 300ms;
+}

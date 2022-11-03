@@ -6,35 +6,36 @@ import {
   useCurrentTextColor,
 } from '../hooks/useCurrentTextColor';
 import { useTextColor } from '../hooks/useTextColor';
+import home from '../data/home';
+import { Link } from 'react-router-dom';
+
 const Home = () => {
   const { textColor, setTextColor } = useTextColor();
-
   return (
     <PageContainer>
       <div className="flex flex-col-reverse lg:flex-row gap-10 justify-end py-6 md:py-10 items-center lg:items-center">
         <section className=" flex flex-col gap-2 md:gap-10 text-[#43364A] dark:text-[#FDF5E8]">
           <h3 className="text-4xl xl:text-5xl ">
             Hello,my name is{' '}
-            <span className={`${useCurrentTextColor(textColor)}`}>Fanis</span>
+            <span className={`${useCurrentTextColor(textColor)}`}>
+              {home.name}
+            </span>
           </h3>
           <h2 className="text-4xl xl:text-5xl">
             I'm a Front{' '}
             <span className={`${useCurrentTextColor(textColor)}`}>
-              End Developer
+              {home.position}
             </span>
           </h2>
-          <p className="para">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-            enim perferendis! Est possimus, quam ipsa quidem molestiae quaerat
-            dolores earum.
-          </p>
-          <button
+          <p className="para">{home.description}</p>
+          <Link
+            to="/about"
             className={`text-4xl rounded-full px-4 py-2 text-white ${useCurrentBgColor(
               textColor
             )} self-start`}
           >
             More About Me
-          </button>
+          </Link>
         </section>
         <section className="">
           <div
